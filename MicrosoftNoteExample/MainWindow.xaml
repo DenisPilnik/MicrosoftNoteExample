@@ -29,6 +29,6 @@
         </TitleBar>
 
         <!-- App content -->
-        <Frame x:Name="rootFrame" SourcePageType="views:NotePage" Grid.Row="1"/>
+        <Frame x:Name="rootFrame" SourcePageType="views:AllNotesPage" Grid.Row="1"/>
     </Grid>
 </Window>
