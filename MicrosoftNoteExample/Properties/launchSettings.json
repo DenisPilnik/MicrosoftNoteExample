@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "MicrosoftNoteExample (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "MicrosoftNoteExample (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
