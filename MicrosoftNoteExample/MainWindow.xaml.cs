@@ -13,9 +13,6 @@ using Microsoft.UI.Xaml.Navigation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
-// To learn more about WinUI, the WinUI project structure,
-// and more about our project templates, see: http://aka.ms/winui-project-info.
-
 namespace MicrosoftNoteExample
 {
     /// <summary>
@@ -26,6 +23,11 @@ namespace MicrosoftNoteExample
         public MainWindow()
         {
             InitializeComponent();
+
+            // Hide the default system title bar.
+            ExtendsContentIntoTitleBar = true;
+            // Replace system title bar with the WinUI TitleBar.
+            SetTitleBar(AppTitleBar);
         }
     }
 }
