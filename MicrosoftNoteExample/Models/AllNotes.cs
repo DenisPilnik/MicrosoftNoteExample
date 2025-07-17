@@ -14,7 +14,7 @@ namespace MicrosoftNoteExample.Models
          
         public AllNotes()
         {
-            LoadNotes();
+            //LoadNotes();
         }
 
         public async void LoadNotes()

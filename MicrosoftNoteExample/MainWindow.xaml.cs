@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
+using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -10,6 +6,11 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -28,6 +29,17 @@ namespace MicrosoftNoteExample
             ExtendsContentIntoTitleBar = true;
             // Replace system title bar with the WinUI TitleBar.
             SetTitleBar(AppTitleBar);
+
+            AppWindow.Resize(new Windows.Graphics.SizeInt32(500, 400));
+
+            OverlappedPresenter presenter = OverlappedPresenter.Create();
+            presenter.PreferredMinimumWidth = 500;
+            presenter.PreferredMinimumHeight = 400;
+            presenter.PreferredMaximumWidth = 800;
+            presenter.PreferredMaximumHeight = 700;
+            presenter.IsMaximizable = false;
+
+            AppWindow.SetPresenter(presenter);
         }
 
         private void AppTitleBar_BackRequested(TitleBar sender, object args)
