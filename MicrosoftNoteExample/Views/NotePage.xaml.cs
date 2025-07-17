@@ -38,7 +38,27 @@ namespace MicrosoftNoteExample.Views
         }
         private async void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            await NoteModel.DeleteAsync();
+            if (NoteModel is not null)
+            {
+                await NoteModel.DeleteAsync();
+            }
+            if (Frame.CanGoBack == true)
+            {
+                Frame.GoBack();
+            }
+        }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            if (e.Parameter is Note note)
+            {
+                NoteModel = note;
+            }
+            else
+            {
+                NoteModel = new Note();
+            }
         }
     }
 }
