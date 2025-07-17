@@ -13,6 +13,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <Content Remove="Assets\MainPageWidthNotes.png" />
+    <Content Remove="Assets\MainPageWithoutNotes.png" />
+    <Content Remove="Assets\NotePage.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="NotePage.xaml" />
     <None Remove="Views\AllNotesPage.xaml" />
   </ItemGroup>
