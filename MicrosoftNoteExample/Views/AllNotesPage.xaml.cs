@@ -29,5 +29,14 @@ namespace MicrosoftNoteExample.Views
         {
             InitializeComponent();
         }
+
+        private void AddNewNoteButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(NotePage));
+        }
+        private void ItemsView_ItemInvoked(ItemsView sender, ItemsViewItemInvokedEventArgs args)
+        {
+            Frame.Navigate(typeof(NotePage), args.InvokedItem);
+        }
     }
 }
