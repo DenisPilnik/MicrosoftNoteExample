@@ -28,6 +28,7 @@ namespace MicrosoftNoteExample.Models
                 noteFile = await storageFolder.CreateFileAsync(Filename, CreationCollisionOption.ReplaceExisting);
             }
             await FileIO.WriteTextAsync(noteFile, Text);
+            await JsonParser.SaveToJson(this);
         }
 
         public async Task DeleteAsync()
